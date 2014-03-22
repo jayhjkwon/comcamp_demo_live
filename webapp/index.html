@@ -1,11 +1,112 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.css" rel="stylesheet" />
+  <style>
+      body {padding-top: 60px;}
+      .ember-text-field {width:308px;}
+      textarea { width: 300px !important; height:100px;}
+  </style>    
 </head>
 <body>
-    <h1>Hello Nancy</h1>
+
+<script type="text/x-handlebars">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="navbar-inner">
+	        <div class="container">
+	            <a class="brand" href="#">커뮤니티</a>
+	            <div class="nav-collapse collapse">
+	                <ul class="nav">
+	                    <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+	                    <li>{{#link-to 'posts'}}Posts{{/link-to}}</li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div class="container">
+	    {{outlet}}
+	</div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="posts">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span3">        
+        <table class="table">
+          {{#each post in model}}
+            <tr>
+              <td>
+                {{#link-to 'post' post}}{{post.title}}{{/link-to}}
+              </td>
+              <td>
+                {{#link-to 'post.edit' post class="btn"}}Edit{{/link-to}}
+              </td>
+            </tr>
+          {{/each}}
+        </table>
+      </div>      
+      <div class="span9">
+        {{outlet}}
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="posts/index">
+	<h1>Select a Post</h1>
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+	<h1>Hello {{you}}</h1>
+	{{input type=text value=you}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="post">
+	<div class="well">
+		{{ post-detail title=title contents=contents }}
+	</div>
+	{{outlet}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/post-detail">
+	<h3>{{title}}</h3>
+		<div>{{ markdown contents}}</div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="post/edit">
+	<div class="well">
+		{{input type=text value=title}}
+		<br /><br />
+		{{textarea value=contents}}
+		<br /><br />
+		<button {{action "savePost"}} >Save</button>
+	</div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="loading">
+	<h1>Loading...</h1>
+</script>
+
+<script src="dist/app.min.js"></script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
