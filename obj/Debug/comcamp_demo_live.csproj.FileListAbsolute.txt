@@ -1,0 +1,11 @@
+C:\Users\sujin\sample-source\comcamp_demo_live\bin\Debug\comcamp_demo_live.exe.config
+C:\Users\sujin\sample-source\comcamp_demo_live\bin\Debug\comcamp_demo_live.exe
+C:\Users\sujin\sample-source\comcamp_demo_live\bin\Debug\comcamp_demo_live.pdb
+C:\Users\sujin\sample-source\comcamp_demo_live\bin\Debug\Nancy.dll
+C:\Users\sujin\sample-source\comcamp_demo_live\bin\Debug\Nancy.Hosting.Self.dll
+C:\Users\sujin\sample-source\comcamp_demo_live\bin\Debug\Nancy.xml
+C:\Users\sujin\sample-source\comcamp_demo_live\bin\Debug\Nancy.Hosting.Self.xml
+C:\Users\sujin\sample-source\comcamp_demo_live\obj\Debug\comcamp_demo_live.csprojResolveAssemblyReference.cache
+C:\Users\sujin\sample-source\comcamp_demo_live\obj\Debug\comcamp_demo_live.exe
+C:\Users\sujin\sample-source\comcamp_demo_live\obj\Debug\comcamp_demo_live.pdb
+C:\Users\sujin\sample-source\comcamp_demo_live\bin\Debug\webapp\index.html
